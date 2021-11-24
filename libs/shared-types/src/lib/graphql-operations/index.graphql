@@ -1,0 +1,39 @@
+query hello {
+  hello
+}
+
+query user($id: Int!) {
+  user(id: $id) {
+    id
+    email
+  }
+}
+
+query me {
+  me {
+    id
+    email
+  }
+}
+
+mutation regiserUser($registerInput: RegisterInput!) {
+  register(registerInput: $registerInput) {
+    id
+    email
+    firstName
+    lastName
+  }
+}
+
+mutation login($loginInput: LoginInput!) {
+  login(loginInput: $loginInput) {
+    id
+    email
+    firstName
+    lastName
+  }
+}
+
+mutation logout {
+  logout
+}

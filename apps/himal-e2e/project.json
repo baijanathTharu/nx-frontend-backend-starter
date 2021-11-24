@@ -1,0 +1,28 @@
+{
+  "root": "apps/himal-e2e",
+  "sourceRoot": "apps/himal-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/himal-e2e/cypress.json",
+        "devServerTarget": "himal:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "himal:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/himal-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["himal"]
+}

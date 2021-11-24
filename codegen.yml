@@ -1,0 +1,12 @@
+overwrite: true
+documents: './libs/shared-types/src/lib/graphql-operations/*.graphql'
+schema: http://localhost:1729/graphql
+generates:
+  ./libs/shared-types/src/lib/__generated__/graphql-types-gen.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-resolvers
+      - typescript-react-query
+    config:
+      fetcher: fetch

@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "himal": "apps/himal",
+    "himal-e2e": "apps/himal-e2e",
+    "shared-types": "libs/shared-types",
+    "terai": "apps/terai"
+  }
+}
